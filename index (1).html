@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheesecuit — Sweet Moments, One Cup at a Time</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cream: '#FAF6F0',
+                            beige: '#F5EBE0',
+                            pink: '#F472B6',
+                            softpink: '#FCE7F3',
+                            pinkhover: '#EC4899',
+                            brown: '#8D5B4C',
+                            darkbrown: '#5D3A2F',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF6F0;
+            color: #5D3A2F;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Fredoka', cursive, sans-serif;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 25px -5px rgba(141, 91, 76, 0.08), 0 8px 10px -6px rgba(141, 91, 76, 0.04);
+        }
+        .soft-shadow-hover:hover {
+            box-shadow: 0 20px 30px -10px rgba(141, 91, 76, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-softpink selection:text-brand-brown">
+
+    <!-- A. NAVBAR -->
+    <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-brown/10 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-2 text-2xl font-bold font-heading text-brand-brown tracking-wide">
+                <i class="fa-solid font-normal fa-cookie-bite text-brand-pink text-2xl"></i>
+                <span>Cheesecuit<span class="text-brand-pink">.</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-brand-darkbrown">
+                <a href="#home" class="hover:text-brand-pink transition-colors">Home</a>
+                <a href="#product" class="hover:text-brand-pink transition-colors">Our Product</a>
+                <a href="#about" class="hover:text-brand-pink transition-colors">About</a>
+                <a href="#contact" class="hover:text-brand-pink transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop Order Button -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20tertarik%20untuk%20memesan%20Cheesecuit.%20Boleh%20info%20cara%20ordernya?" target="_blank" rel="noopener noreferrer" class="bg-brand-pink text-white px-6 py-2.5 rounded-full font-semibold shadow-md hover:bg-brand-pinkhover transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-brand-darkbrown focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-cream border-b border-brand-brown/10 px-6 py-4 space-y-3">
+            <a href="#home" class="block font-medium text-brand-darkbrown hover:text-brand-pink py-1">Home</a>
+            <a href="#product" class="block font-medium text-brand-darkbrown hover:text-brand-pink py-1">Our Product</a>
+            <a href="#about" class="block font-medium text-brand-darkbrown hover:text-brand-pink py-1">About</a>
+            <a href="#contact" class="block font-medium text-brand-darkbrown hover:text-brand-pink py-1">Contact</a>
+            <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20tertarik%20untuk%20memesan%20Cheesecuit.%20Boleh%20info%20cara%20ordernya?" target="_blank" rel="noopener noreferrer" class="block text-center bg-brand-pink text-white py-2.5 rounded-full font-semibold mt-4">
+                <i class="fa-brands fa-whatsapp mr-1"></i> Order Now
+            </a>
+        </div>
+    </header>
+
+    <!-- B. HERO SECTION -->
+    <section id="home" class="py-12 md:py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Text Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-softpink text-brand-pink font-semibold text-sm">
+                    <i class="fa-solid fa-sparkles"></i>
+                    <span>Dessert Cheesecuit Kekinian</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-darkbrown leading-tight">
+                    Sweet Moments,<br>
+                    <span class="text-brand-pink">One Cup at a Time.</span>
+                </h1>
+                <p class="text-brand-brown/80 text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
+                    Temukan manisnya Cheesecuit dalam setiap cup. Dessert creamy dengan pilihan rasa favorit yang siap menemani hari-harimu.
+                </p>
+
+                <!-- Spec Badges -->
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                    <div class="bg-white/80 border border-brand-brown/10 px-4 py-2 rounded-2xl flex items-center gap-2 soft-shadow">
+                        <i class="fa-solid fa-tag text-brand-pink"></i>
+                        <span class="font-bold text-brand-darkbrown">Rp5.000 <span class="text-xs font-normal text-brand-brown">/ cup</span></span>
+                    </div>
+                    <div class="bg-white/80 border border-brand-brown/10 px-4 py-2 rounded-2xl flex items-center gap-2 soft-shadow">
+                        <i class="fa-solid fa-wine-glass text-brand-pink"></i>
+                        <span class="font-bold text-brand-darkbrown">Ukuran 120 ml</span>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20tertarik%20untuk%20memesan%20Cheesecuit.%20Boleh%20info%20cara%20ordernya?" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-brand-pink hover:bg-brand-pinkhover text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-brand-pink/20 transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Order Now</span>
+                    </a>
+                    <a href="#product" class="w-full sm:w-auto bg-white border border-brand-brown/20 text-brand-brown hover:bg-brand-beige px-8 py-3.5 rounded-full font-bold transition-all text-center flex items-center justify-center gap-2">
+                        <span>Explore Our Flavors</span>
+                        <i class="fa-solid fa-arrow-down text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image Placeholder / Original Image Wrapper -->
+            <div class="relative flex justify-center">
+                <!-- Background decorative elements -->
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-brand-softpink rounded-full blur-2xl opacity-70"></div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-beige rounded-full blur-2xl opacity-80"></div>
+                
+                <div class="relative w-full max-w-md aspect-square bg-white border-4 border-white rounded-3xl soft-shadow overflow-hidden flex flex-col items-center justify-center text-center p-6 group">
+                    <!-- Photo Display: Uses fallback styling if photo is missing -->
+                    <img src="public/images/cheesecuit-hero.jpg" alt="Cheesecuit Hero" class="w-full h-full object-cover rounded-2xl absolute inset-0 z-10 transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'; document.getElementById('hero-placeholder').style.display='flex';">
+                    
+                    <!-- Fallback Placeholder -->
+                    <div id="hero-placeholder" class="hidden flex-col items-center justify-center text-brand-brown/50 space-y-3 z-0">
+                        <i class="fa-solid fa-image text-5xl text-brand-pink/40"></i>
+                        <p class="font-semibold text-sm">Foto Utama Cheesecuit</p>
+                        <span class="text-xs bg-brand-cream px-3 py-1 rounded-full text-brand-brown">public/images/cheesecuit-hero.jpg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- C. PRODUCT SECTION -->
+    <section id="product" class="py-16 bg-white border-y border-brand-brown/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-pink font-semibold tracking-wider text-sm uppercase">Varian Rasa</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-darkbrown">Meet Our Cheesecuit</h2>
+                <p class="text-brand-brown/80">Three delicious flavors, one little cup of happiness.</p>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Matcha -->
+                <div class="bg-brand-cream rounded-3xl p-6 border border-brand-brown/10 soft-shadow soft-shadow-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative w-full aspect-square bg-white rounded-2xl overflow-hidden mb-6 soft-shadow flex items-center justify-center">
+                            <img src="public/images/cheesecuit-matcha.jpg" alt="Matcha Cheesecuit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="hidden flex-col items-center justify-center text-brand-brown/50 p-4 text-center">
+                                <i class="fa-solid fa-leaf text-4xl text-emerald-400 mb-2"></i>
+                                <span class="font-medium text-xs">public/images/cheesecuit-matcha.jpg</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-darkbrown mb-2">Matcha Cheesecuit</h3>
+                        <p class="text-brand-brown/80 text-sm leading-relaxed mb-6">
+                            Perpaduan rasa matcha yang khas dengan tekstur dessert yang creamy dan lembut.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-brand-brown/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-brand-brown block">Harga / 120ml</span>
+                            <span class="text-xl font-bold text-brand-darkbrown">Rp5.000</span>
+                        </div>
+                        <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20mau%20pesan%20Matcha%20Cheesecuit.%20Apakah%20masih%20tersedia?" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-brand-pinkhover text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-colors flex items-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Order This Flavor</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Milo -->
+                <div class="bg-brand-cream rounded-3xl p-6 border border-brand-brown/10 soft-shadow soft-shadow-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative w-full aspect-square bg-white rounded-2xl overflow-hidden mb-6 soft-shadow flex items-center justify-center">
+                            <img src="public/images/cheesecuit-milo.jpg" alt="Milo Cheesecuit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="hidden flex-col items-center justify-center text-brand-brown/50 p-4 text-center">
+                                <i class="fa-solid fa-mug-hot text-4xl text-amber-700 mb-2"></i>
+                                <span class="font-medium text-xs">public/images/cheesecuit-milo.jpg</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-darkbrown mb-2">Milo Cheesecuit</h3>
+                        <p class="text-brand-brown/80 text-sm leading-relaxed mb-6">
+                            Dessert dengan cita rasa cokelat Milo yang manis dan nikmat.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-brand-brown/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-brand-brown block">Harga / 120ml</span>
+                            <span class="text-xl font-bold text-brand-darkbrown">Rp5.000</span>
+                        </div>
+                        <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20mau%20pesan%20Milo%20Cheesecuit.%20Apakah%20masih%20tersedia?" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-brand-pinkhover text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-colors flex items-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Order This Flavor</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Oreo -->
+                <div class="bg-brand-cream rounded-3xl p-6 border border-brand-brown/10 soft-shadow soft-shadow-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative w-full aspect-square bg-white rounded-2xl overflow-hidden mb-6 soft-shadow flex items-center justify-center">
+                            <img src="public/images/cheesecuit-oreo.jpg" alt="Oreo Cheesecuit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="hidden flex-col items-center justify-center text-brand-brown/50 p-4 text-center">
+                                <i class="fa-solid fa-cookie text-4xl text-slate-700 mb-2"></i>
+                                <span class="font-medium text-xs">public/images/cheesecuit-oreo.jpg</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-darkbrown mb-2">Oreo Cheesecuit</h3>
+                        <p class="text-brand-brown/80 text-sm leading-relaxed mb-6">
+                            Perpaduan dessert creamy dengan sensasi rasa Oreo yang menjadi favorit banyak orang.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-brand-brown/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-brand-brown block">Harga / 120ml</span>
+                            <span class="text-xl font-bold text-brand-darkbrown">Rp5.000</span>
+                        </div>
+                        <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20mau%20pesan%20Oreo%20Cheesecuit.%20Apakah%20masih%20tersedia?" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-brand-pinkhover text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-colors flex items-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Order This Flavor</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- D. ABOUT SECTION -->
+    <section id="about" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+            <div class="w-16 h-16 bg-brand-softpink text-brand-pink rounded-full flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold text-brand-darkbrown">A Little Sweetness for Your Day</h2>
+            <p class="text-brand-brown/80 text-lg leading-relaxed max-w-2xl mx-auto">
+                Cheesecuit hadir untuk memberikan pengalaman menikmati dessert yang manis, creamy, dan menyenangkan dalam satu cup kecil. Dengan pilihan rasa Matcha, Milo, dan Oreo, Cheesecuit siap menjadi teman manis untuk menemani waktu santai, belajar, maupun berkumpul bersama teman.
+            </p>
+        </div>
+    </section>
+
+    <!-- E. PRICE / SPECIAL OFFER SECTION -->
+    <section class="py-16 bg-brand-softpink/50 border-y border-brand-pink/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-8 md:p-12 border border-brand-pink/20 text-center soft-shadow space-y-6">
+                <span class="bg-brand-pink text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">Affordable Happiness</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-darkbrown">Your Favorite Dessert, Only Rp5.000!</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto py-4">
+                    <div class="p-4 bg-brand-cream rounded-2xl">
+                        <div class="text-brand-pink text-xl mb-1"><i class="fa-solid fa-tag"></i></div>
+                        <div class="font-bold text-brand-darkbrown">Rp5.000</div>
+                        <div class="text-xs text-brand-brown">Harga per cup</div>
+                    </div>
+                    <div class="p-4 bg-brand-cream rounded-2xl">
+                        <div class="text-brand-pink text-xl mb-1"><i class="fa-solid fa-box"></i></div>
+                        <div class="font-bold text-brand-darkbrown">120 ml</div>
+                        <div class="text-xs text-brand-brown">Ukuran cup</div>
+                    </div>
+                    <div class="p-4 bg-brand-cream rounded-2xl">
+                        <div class="text-brand-pink text-xl mb-1"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="font-bold text-brand-darkbrown">3 Varian</div>
+                        <div class="text-xs text-brand-brown">Matcha, Milo, Oreo</div>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20tertarik%20untuk%20memesan%20Cheesecuit.%20Boleh%20info%20cara%20ordernya?" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-brand-pinkhover text-white px-8 py-3.5 rounded-full font-bold shadow-md transition-all inline-flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- F. CONTACT SECTION -->
+    <section id="contact" class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
+            <div class="space-y-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-darkbrown">Let's Get Your Cheesecuit!</h2>
+                <p class="text-brand-brown/80 text-lg">Ready to enjoy your favorite dessert? Yuk, pesan Cheesecuit sekarang!</p>
+            </div>
+
+            <!-- Social & Contact Links -->
+            <div class="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20tertarik%20untuk%20memesan%20Cheesecuit.%20Boleh%20info%20cara%20ordernya?" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-2xl border border-brand-brown/10 soft-shadow soft-shadow-hover transition-all flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-brand-brown font-medium">WhatsApp</div>
+                        <div class="font-bold text-brand-darkbrown text-sm">0877-2985-6498</div>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/helenyuniass/" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-2xl border border-brand-brown/10 soft-shadow soft-shadow-hover transition-all flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-brand-brown font-medium">Instagram</div>
+                        <div class="font-bold text-brand-darkbrown text-sm">@helenyuniass</div>
+                    </div>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@elenniiyyy" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-2xl border border-brand-brown/10 soft-shadow soft-shadow-hover transition-all flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-slate-100 text-slate-800 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-brand-brown font-medium">TikTok</div>
+                        <div class="font-bold text-brand-darkbrown text-sm">@elenniiyyy</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- G. FOOTER -->
+    <footer class="bg-brand-darkbrown text-brand-cream py-12 border-t border-brand-brown/20">
+        <div class="max-w-6xl mx-auto px-6 text-center space-y-6">
+            <div class="flex items-center justify-center gap-2 text-2xl font-bold font-heading">
+                <i class="fa-solid fa-cookie-bite text-brand-pink"></i>
+                <span>Cheesecuit</span>
+            </div>
+            <p class="text-brand-beige/70 text-sm">"Sweet Moments, One Cup at a Time."</p>
+
+            <div class="flex justify-center gap-6 text-lg">
+                <a href="https://www.instagram.com/helenyuniass/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-pink transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@elenniiyyy" target="_blank" rel="noopener noreferrer" class="hover:text-brand-pink transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/6287729856498?text=Halo%20Cheesecuit!%20Aku%20tertarik%20untuk%20memesan%20Cheesecuit.%20Boleh%20info%20cara%20ordernya?" target="_blank" rel="noopener noreferrer" class="hover:text-brand-pink transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+            <div class="text-xs text-brand-beige/50 pt-4 border-t border-brand-cream/10">
+                &copy; 2026 Cheesecuit. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Interactivity -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
